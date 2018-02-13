@@ -8,7 +8,7 @@ To run the demo
 
 ```
 mvn clean compile
-mvn exec:java -Dexec.mainClass=phat.OldPeopleHome
+mvn exec:java -Dexec.mainClass=phat.ActivityHomeDemo
 ```
 In case of running into memory problems
 ```

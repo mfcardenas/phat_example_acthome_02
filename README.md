@@ -17,7 +17,7 @@ export MAVEN_OPTS="-Xmx512m -XX:MaxPermSize=128m"
 And then run the previous command
     </td>
     <td>
-        <img src="https://github.com/mfcardenas/phat_example_acthome02/blob/master/img/img_older_people_home.png" />
+        <img src="https://github.com/mfcardenas/phat_example_acthome_02/blob/master/img/img_older_people_home.png" />
     </td>
 </tr>
 </table>

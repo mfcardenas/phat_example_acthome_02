@@ -94,12 +94,12 @@ public class ActivityHomeDemo implements PHATInitAppListener {
 
         BulletAppState bulletAppState = new BulletAppState();
         stateManager.attach(bulletAppState);
-        bulletAppState.setDebugEnabled(false);
+        bulletAppState.setDebugEnabled(true);
 
         SpatialEnvironmentAPI seAPI = SpatialEnvironmentAPI.createSpatialEnvironmentAPI(app);
 
         seAPI.getWorldAppState().setCalendar(2016, 6 ,1, 12, 30, 0);
-        seAPI.getHouseAppState().runCommand(new CreateHouseCommand("House1", HouseFactory.HouseType.House3room2bath));
+        seAPI.getHouseAppState().runCommand(new CreateHouseCommand("Home", HouseFactory.HouseType.House3room2bath));
 
         bodiesAppState = new BodiesAppState();
         stateManager.attach(bodiesAppState);
@@ -108,7 +108,7 @@ public class ActivityHomeDemo implements PHATInitAppListener {
         bodiesAppState.createBody(BodiesAppState.BodyType.Young, "Patient");
 
         //Se posicionan en la casa
-        bodiesAppState.setInSpace("Patient", "House1", "Chair3");
+        bodiesAppState.setInSpace("Patient", "Home", "Sink");
 
         bodiesAppState.runCommand(new SetBodyInCoordenatesCommand("Patient", Vector3f.ZERO));
         bodiesAppState.runCommand(new SetSpeedDisplacemenetCommand("Patient", 0.5f));
@@ -160,7 +160,7 @@ public class ActivityHomeDemo implements PHATInitAppListener {
                     AccelerometerControl ac2 = devicesAppState.getDevice("sensor2")
                             .getControl(AccelerometerControl.class);
                     ac2.setMode(AccelerometerControl.AMode.GRAVITY_MODE);
-                    XYAccelerationsChart chart2 = new XYAccelerationsChart("Data Accelerations Rigth Hand", "Local Sensor PHAT-SIM Rigth Hand", "m/s2",
+                    XYAccelerationsChart chart2 = new XYAccelerationsChart("Data Accelerations Right Hand", "Local Sensor PHAT-SIM Rigth Hand", "m/s2",
                             "x,y,z");
                     ac2.add(chart2);
                     chart2.showWindow();

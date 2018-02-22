@@ -94,12 +94,12 @@ public class ActivityHomeDemo implements PHATInitAppListener {
 
         BulletAppState bulletAppState = new BulletAppState();
         stateManager.attach(bulletAppState);
-        bulletAppState.setDebugEnabled(true);
+        bulletAppState.setDebugEnabled(false);
 
         SpatialEnvironmentAPI seAPI = SpatialEnvironmentAPI.createSpatialEnvironmentAPI(app);
 
         seAPI.getWorldAppState().setCalendar(2016, 6 ,1, 12, 30, 0);
-        seAPI.getHouseAppState().runCommand(new CreateHouseCommand("Home", HouseFactory.HouseType.House3room2bath));
+        seAPI.getHouseAppState().runCommand(new CreateHouseCommand("Home3", HouseFactory.HouseType.BrickHouse60m));
 
         bodiesAppState = new BodiesAppState();
         stateManager.attach(bodiesAppState);
@@ -108,7 +108,7 @@ public class ActivityHomeDemo implements PHATInitAppListener {
         bodiesAppState.createBody(BodiesAppState.BodyType.Young, "Patient");
 
         //Se posicionan en la casa
-        bodiesAppState.setInSpace("Patient", "Home", "Sink");
+        bodiesAppState.setInSpace("Patient", "Home3", "LivingRoom");
 
         bodiesAppState.runCommand(new SetBodyInCoordenatesCommand("Patient", Vector3f.ZERO));
         bodiesAppState.runCommand(new SetSpeedDisplacemenetCommand("Patient", 0.5f));
@@ -135,8 +135,8 @@ public class ActivityHomeDemo implements PHATInitAppListener {
         serverAppState.runCommand(new ActivateAccelerometerServerCommand("PatientBodyAccel", "sensor1"));
         serverAppState.runCommand(new ActivateAccelerometerServerCommand("PatientBodyAccel", "sensor2"));
 
-        app.getCamera().setLocation(new Vector3f(6.5472484f, 1.5681753f, 4.951794f));
-        app.getCamera().setRotation(new Quaternion(0.030681776f, 0.9156617f, -0.0712238f, 0.39439762f));
+        app.getCamera().setLocation(new Vector3f(7f, 7.25f, 3.1f));
+        app.getCamera().setRotation(new Quaternion(0.37133554f, -0.6016627f, 0.37115145f, 0.60196227f));
 
         stateManager.attach(new AbstractAppState() {
             PHATApplication app;

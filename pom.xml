@@ -23,11 +23,7 @@
             <distribution/>
         </license>
     </licenses>
-    <scm>
-        <connection>scm:git:git://github.com/GRASIA/phatsim.git</connection>
-        <developerConnection>scm:git:git@github.com:GRASIA/phatsim.git</developerConnection>
-        <url>https://github.com/Grasia/phatsim</url>
-    </scm>
+
     <developers>
         <developer>
             <id>escalope</id>
@@ -47,8 +43,8 @@
     </developers>
     <properties>
         <vendor>GRASIA Research Group</vendor>
-        <developername>Pablo Campillo-Sanchez</developername>
-        <developeremail>pabcampi@ucm.es</developeremail>
+        <developername>UCM</developername>
+        <developeremail>grasia@ucm.es</developeremail>
         <jme.version>3.0.1</jme.version>
         <sociaal.version>1.0.12-SNAPSHOT</sociaal.version>
         <jali.version>1.0.10-SNAPSHOT</jali.version>
@@ -171,6 +167,4 @@
             <url>https://oss.sonatype.org/content/groups/public/</url>
         </repository>
     </repositories>
-
-
 </project>

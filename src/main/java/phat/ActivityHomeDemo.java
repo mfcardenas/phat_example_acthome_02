@@ -176,8 +176,6 @@ public class ActivityHomeDemo implements PHATInitAppListener {
                     chart1.showWindow();
                     init = true;
 
-                    // Grafica del Sensor...
-
                 }
 
                 cont += f;
